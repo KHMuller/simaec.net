@@ -85,7 +85,7 @@ def get_page(url, website, selector):
         result['url'] = url
         result['status_code'] = 900 
         result['status_message'] = 'Tree failed'
-        return '', result
+        return result
 
     # get first canonical tag href attribute value
     try:
