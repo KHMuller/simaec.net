@@ -1,2 +1,6 @@
 # simaec.net
-A collection of tools and scripts for building and maintaining websites
+A collection scripts
+
+backup.py: Created zipped files of folders for remote storage/backup
+crawler.py: Crawl a website
+firestore.py: Backup all documents in a list of collections
