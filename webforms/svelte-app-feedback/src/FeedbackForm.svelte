@@ -20,7 +20,7 @@
     let domain = window.location.hostname.replace('www.','');
     let valid_domains = ['muuuh.com','simaec.net','discoverymexico.com.mx']
 
-	let messageRef = '';
+    let messageRef = '';
     let uuid = ('; '+document.cookie).split(`; uuid=`).pop().split(';')[0];
 
     $: isMeetmyneeds = (!isValidForm && (!meetmyneeds || meetmyneeds === '')) ? false : true;
@@ -36,15 +36,15 @@
         if (!uuid && uuid === '') {isValidForm = false;} // document out to test locally
         if (isValidForm) {
             const data = {
-				dt_created: Math.round(new Date().getTime()/1000),
+                dt_created: Math.round(new Date().getTime()/1000),
                 meetmyneeds,
                 easytofind,
                 email,
                 comments,
                 url,
                 uuid,
-				source: 'feedbackform',
-                secret: '96fb920b-9824-464b-f394-0187e143e04d'
+		source: 'feedbackform',
+                secret: 'a-secret'
             }
 			firestore.collection("webforms").add(data)
 			.then((docRef) => {
