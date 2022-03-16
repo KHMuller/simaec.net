@@ -7,3 +7,6 @@ Scripts
 
 Templates
 - index.html: a simple html file
+
+Webforms
+- svelte-app-feedback: a simple, modal form to submit feedback.
