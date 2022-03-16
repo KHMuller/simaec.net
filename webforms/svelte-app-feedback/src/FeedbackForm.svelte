@@ -1,5 +1,5 @@
 <script>
-	import { firestore } from "./firebase.js"
+    import { firestore } from "./firebase.js"
     import { fade } from 'svelte/transition';
     
     let shown = false;
@@ -7,8 +7,8 @@
     export function show() { shown = true; }
     function hide() { shown = false; }
 
-	let showForm = true;
-	let showError = false;
+    let showForm = true;
+    let showError = false;
     let showMissing = false;
     let isValidForm = true;   
 
@@ -18,7 +18,7 @@
     let comments = '';
     let url = window.location.href;
     let domain = window.location.hostname.replace('www.','');
-    let valid_domains = ['muuuh.com','simaec.net','discoverymexico.com.mx']
+    let valid_domains = ['simaec.net']
 
     let messageRef = '';
     let uuid = ('; '+document.cookie).split(`; uuid=`).pop().split(';')[0];
@@ -44,7 +44,7 @@
                 url,
                 uuid,
 		source: 'feedbackform',
-                secret: 'a-secret'
+                secret: 'a-public-secret'
             }
 			firestore.collection("webforms").add(data)
 			.then((docRef) => {
