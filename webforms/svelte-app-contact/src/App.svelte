@@ -1,13 +1,13 @@
 <script>
     import { firestore } from "./firebase.js"
 
-    // Form Switches and Validations
+    // Form Switches, Validations and Response Variables
     let showForm = true;
     let showError = false;
-
     let isValidated = true;
     let isValidatedHidden = true;
-
+    let messageRef = ''; 
+                        
     // Form Fields Variables
     let firstname = '';
     let lastname = '';
@@ -21,10 +21,7 @@
     $: isEmail = (!isValidated && (!email || email === '')) ? false : true;
     $: isMessage = (!isValidated && (!message || message === '')) ? false : true;
     $: isTopic = (!isValidated && (!topic || topic === '')) ? false : true;
-    
-    // Form Submission Response Variables
-    let messageRef = '';    
-    
+     
     // Form Hidden Variables
     let uuid = ('; '+document.cookie).split(`; uuid=`).pop().split(';')[0];
     let domain = window.location.hostname.replace('www.','');
