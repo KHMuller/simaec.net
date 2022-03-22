@@ -7,8 +7,6 @@
     Only index.html are considered pages of the website.
     Creates a sitemap (XML format) with the pages found within the folder ../public/. 
     Creates a csv file of all pages found.
-
-    Author: Karl-Heinz Müller (karlheinz at gmail dot com)
 """
 import pandas as pd
 import os
