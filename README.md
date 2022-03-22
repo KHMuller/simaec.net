@@ -7,7 +7,7 @@ Scripts
 - firestore.py: Backup all documents in a list of collections
 
 Templates
-- index.html: a simple html file
+- index.html: An html file
 
 Webforms
 - svelte-app-contact: A contact us form.
